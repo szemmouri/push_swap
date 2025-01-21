@@ -1,6 +1,19 @@
-#include "../../includes/push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/15 12:52:09 by szemmour          #+#    #+#             */
+/*   Updated: 2025/01/19 12:21:53 by szemmour         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int	push(t_stack **stack_to, t_stack **stack_from)
+#include "../../includes/push_swap.h"
+#include "../../libft/libft.h"
+
+int	push(t_stack **stack_to, t_stack **stack_from)
 {
 	t_stack	*stack_top;
 

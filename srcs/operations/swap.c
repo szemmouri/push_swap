@@ -1,6 +1,19 @@
-#include "../../includes/push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   swap.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/15 12:54:23 by szemmour          #+#    #+#             */
+/*   Updated: 2025/01/19 12:22:56 by szemmour         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int	swap(t_stack **stack)
+#include "../../includes/push_swap.h"
+#include "../../libft/libft.h"
+
+int	swap(t_stack **stack)
 {
 	t_stack	*first;
 	t_stack	*second;
@@ -9,14 +22,12 @@ static int	swap(t_stack **stack)
 		return (0);
 	first = *stack;
 	second = (*stack)->next;
-	// swap first with second
 	first->next = second->next;
 	first->prev = second;
 	if (first->next)
 		first->next->prev = first;
 	second->next = first;
 	second->prev = NULL;
-	// update head
 	*stack = second;
 	return (1);
 }

@@ -1,6 +1,19 @@
-#include "../../includes/push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rotate.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/15 12:52:20 by szemmour          #+#    #+#             */
+/*   Updated: 2025/01/19 12:22:34 by szemmour         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int	rotate(t_stack **stack)
+#include "../../includes/push_swap.h"
+#include "../../libft/libft.h"
+
+int	rotate(t_stack **stack)
 {
 	t_stack	*head;
 	t_stack	*tail;
@@ -9,10 +22,8 @@ static int	rotate(t_stack **stack)
 		return (0);
 	head = *stack;
 	tail = find_tail(head);
-	// Update the head
 	*stack = head->next;
 	(*stack)->prev = NULL;
-	// Move the old head to the tail
 	tail->next = head;
 	head->prev = tail;
 	head->next = NULL;

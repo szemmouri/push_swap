@@ -1,6 +1,19 @@
-#include "../../includes/push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/15 12:52:15 by szemmour          #+#    #+#             */
+/*   Updated: 2025/01/19 12:22:10 by szemmour         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-static int	reverse_rotate(t_stack **stack)
+#include "../../includes/push_swap.h"
+#include "../../libft/libft.h"
+
+int	reverse_rotate(t_stack **stack)
 {
 	t_stack	*head;
 	t_stack	*tail;

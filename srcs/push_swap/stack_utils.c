@@ -6,7 +6,7 @@
 /*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 12:46:14 by szemmour          #+#    #+#             */
-/*   Updated: 2025/01/12 11:26:33 by szemmour         ###   ########.fr       */
+/*   Updated: 2025/01/18 13:18:19 by szemmour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,35 +45,23 @@ void	ft_push_back(t_stack **head, int data)
 	}
 }
 
-t_stack	*find_biggest_node(t_stack *head)
+void	ft_push_front(t_stack **head, int data)
 {
-	t_stack	*biggest_node;
+	t_stack	*new;
 
 	if (!head)
-		return (NULL);
-	biggest_node = head;
-	while (head)
+		return ;
+	new = ft_create_node(data);
+	if (!new)
+		return ;
+	if (!*head)
+		*head = new;
+	else
 	{
-		if (head->data > biggest_node->data)
-			biggest_node = head;
-		head = head->next;
+		new->next = *head;
+		(*head)->prev = new;
+		(*head) = new;
 	}
-	return (biggest_node);
-}
-
-int	stack_len(t_stack *head)
-{
-	int	count;
-
-	if (!head)
-		return (0);
-	count = 0;
-	while (head)
-	{
-		count++;
-		head = head->next;
-	}
-	return (count);
 }
 
 t_stack	*find_tail(t_stack *head)
@@ -83,4 +71,28 @@ t_stack	*find_tail(t_stack *head)
 	while (head->next)
 		head = head->next;
 	return (head);
+}
+
+int	find_max_idx(t_stack *stack)
+{
+	int	i;
+	int	max_idx;
+	int	tmp;
+
+	max_idx = 0;
+	i = 0;
+	if (!stack)
+		return (-1);
+	tmp = stack->data;
+	while (stack)
+	{
+		if (tmp < stack->data)
+		{
+			max_idx = i;
+			tmp = stack->data;
+		}
+		i++;
+		stack = stack->next;
+	}
+	return (max_idx);
 }

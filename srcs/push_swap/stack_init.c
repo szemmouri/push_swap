@@ -6,7 +6,7 @@
 /*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 12:53:50 by szemmour          #+#    #+#             */
-/*   Updated: 2025/01/21 12:43:08 by szemmour         ###   ########.fr       */
+/*   Updated: 2025/01/22 13:24:02 by szemmour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	ft_is_str_digits(char *str)
 	i = 0;
 	if (!str || !str[0])
 		return (0);
-	while (str[i] == ' ' || str[i] == '\t')
+	while (str[i] == ' ')
 		i++;
 	if (str[i] == '-' || str[i] == '+')
 		if (!ft_isdigit(str[++i]))
@@ -30,7 +30,7 @@ static int	ft_is_str_digits(char *str)
 		if (!ft_isdigit(str[i]))
 			return (0);
 		i++;
-		while (str[i] == ' ' || str[i] == '\t')
+		while (str[i] == ' ')
 			i++;
 	}
 	return (1);

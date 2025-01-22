@@ -6,7 +6,7 @@
 /*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 13:20:50 by szemmour          #+#    #+#             */
-/*   Updated: 2025/01/21 10:07:15 by szemmour         ###   ########.fr       */
+/*   Updated: 2025/01/20 18:10:12 by szemmour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ int	main(int argc, char **argv)
 	stack_init(&stack_a, argv);
 	check_moves(&stack_a, &stack_b);
 	free_stack(&stack_a);
-	// free_stack(&stack_b);
+	free_stack(&stack_b);
 	if (argc == 2)
 		free_argv(argv);
 	return (0);

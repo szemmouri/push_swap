@@ -6,16 +6,15 @@
 /*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 12:51:52 by szemmour          #+#    #+#             */
-/*   Updated: 2025/01/21 12:35:51 by szemmour         ###   ########.fr       */
+/*   Updated: 2025/01/21 09:28:22 by szemmour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include <limits.h>
+# include <limits.h>
 # include <stdlib.h>
-# include <stdio.h>
 
 typedef struct s_stack
 {

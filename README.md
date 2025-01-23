@@ -97,7 +97,7 @@ ARG=`ruby -e "puts (0..100).to_a.shuffle.join(' ')"`; ./push_swap $ARG | ./check
 ARG="Random Numbers"; ./push_swap $ARG | ./checker $ARG
 ```
 ### Push Swap Visualizer
-![Push_Swap Visualizer](push_swap/visualisation.gif)
+![Push_Swap Visualizer](https://github.com/szemmouri/push_swap/blob/master/visualisation.gif)
 
 ### Resourses
 https://42-cursus.gitbook.io/guide/rank-02/push_swap?utm_source=chatgpt.com 

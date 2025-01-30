@@ -6,7 +6,7 @@
 /*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 12:51:52 by szemmour          #+#    #+#             */
-/*   Updated: 2025/01/21 09:28:22 by szemmour         ###   ########.fr       */
+/*   Updated: 2025/01/30 11:52:07 by szemmour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,23 +43,23 @@ void				free_errors(t_stack **a);
 
 // operations
 int					swap(t_stack **stack);
-int					sa(t_stack **stack_a);
-int					sb(t_stack **stack_b);
-int					ss(t_stack **stack_a, t_stack **stack_b);
+void				sa(t_stack **stack_a);
+void				sb(t_stack **stack_b);
+void				ss(t_stack **stack_a, t_stack **stack_b);
 
 int					push(t_stack **stack_to, t_stack **stack_from);
-int					pa(t_stack **stack_a, t_stack **stack_b);
-int					pb(t_stack **stack_a, t_stack **stack_b);
+void				pa(t_stack **stack_a, t_stack **stack_b);
+void				pb(t_stack **stack_a, t_stack **stack_b);
 
 int					rotate(t_stack **stack);
-int					ra(t_stack **stack_a);
-int					rb(t_stack **stack_b);
-int					rr(t_stack **stack_a, t_stack **stack_b);
+void				ra(t_stack **stack_a);
+void				rb(t_stack **stack_b);
+void				rr(t_stack **stack_a, t_stack **stack_b);
 
 int					reverse_rotate(t_stack **stack);
-int					rra(t_stack **stack_a);
-int					rrb(t_stack **stack_b);
-int					rrr(t_stack **stack_a, t_stack **stack_b);
+void				rra(t_stack **stack_a);
+void				rrb(t_stack **stack_b);
+void				rrr(t_stack **stack_a, t_stack **stack_b);
 
 // Sorting
 void				sort_three(t_stack **stack_a);

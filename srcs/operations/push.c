@@ -6,7 +6,7 @@
 /*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 12:52:09 by szemmour          #+#    #+#             */
-/*   Updated: 2025/01/22 10:51:37 by szemmour         ###   ########.fr       */
+/*   Updated: 2025/01/30 11:33:54 by szemmour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,18 +29,14 @@ int	push(t_stack **stack_to, t_stack **stack_from)
 	return (1);
 }
 
-int	pa(t_stack **stack_a, t_stack **stack_b)
+void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-	if (push(stack_a, stack_b) == 0)
-		return (0);
-	ft_putendl_fd("pa", 1);
-	return (1);
+	if (push(stack_a, stack_b))
+		ft_putendl_fd("pa", 1);
 }
 
-int	pb(t_stack **stack_a, t_stack **stack_b)
+void	pb(t_stack **stack_a, t_stack **stack_b)
 {
-	if (push(stack_b, stack_a) == 0)
-		return (0);
-	ft_putendl_fd("pb", 1);
-	return (1);
+	if (push(stack_b, stack_a))
+		ft_putendl_fd("pb", 1);
 }

@@ -6,7 +6,7 @@
 /*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/15 12:54:23 by szemmour          #+#    #+#             */
-/*   Updated: 2025/01/19 12:22:56 by szemmour         ###   ########.fr       */
+/*   Updated: 2025/01/30 11:38:02 by szemmour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,32 +32,22 @@ int	swap(t_stack **stack)
 	return (1);
 }
 
-int	sa(t_stack **stack_a)
+void	sa(t_stack **stack_a)
 {
-	if (!stack_a || !*stack_a)
-		return (0);
-	if (swap(stack_a) == 0)
-		return (0);
-	ft_putendl_fd("sa", 1);
-	return (1);
+	if (swap(stack_a))
+		ft_putendl_fd("sa", 1);
 }
 
-int	sb(t_stack **stack_b)
+void	sb(t_stack **stack_b)
 {
-	if (!stack_b || !*stack_b)
-		return (0);
-	if (swap(stack_b) == 0)
-		return (0);
-	ft_putendl_fd("sb", 1);
-	return (1);
+	if (swap(stack_b))
+		ft_putendl_fd("sb", 1);
 }
 
-int	ss(t_stack **stack_a, t_stack **stack_b)
+void	ss(t_stack **stack_a, t_stack **stack_b)
 {
 	if (!stack_a || !*stack_a || !stack_b || !*stack_b)
-		return (0);
-	if (swap(stack_a) == 0 || swap(stack_b) == 0)
-		return (0);
-	ft_putendl_fd("ss", 1);
-	return (1);
+		return ;
+	if (swap(stack_a) && swap(stack_b))
+		ft_putendl_fd("ss", 1);
 }

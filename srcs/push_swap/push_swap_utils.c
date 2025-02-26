@@ -6,7 +6,7 @@
 /*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 09:25:38 by szemmour          #+#    #+#             */
-/*   Updated: 2025/01/20 10:11:23 by szemmour         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:10:16 by szemmour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 int	is_sorted(t_stack *stack_a)
 {
+	if(!stack_a)
+		return 0;
 	while (stack_a->next)
 	{
 		if (stack_a->data > stack_a->next->data)

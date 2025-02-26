@@ -6,7 +6,7 @@
 /*   By: szemmour <szemmour@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 13:20:50 by szemmour          #+#    #+#             */
-/*   Updated: 2025/01/20 18:10:12 by szemmour         ###   ########.fr       */
+/*   Updated: 2025/02/26 12:33:51 by szemmour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,19 +72,22 @@ int	main(int argc, char **argv)
 {
 	t_stack	*stack_a;
 	t_stack	*stack_b;
+	char	**strs;
+	int		i;
 
+	i = 0;
 	stack_a = NULL;
 	stack_b = NULL;
 	if (argc == 1)
 		return (0);
-	argv = &argv[1];
-	if (argc == 2)
-		argv = ft_split(*argv, ' ');
-	stack_init(&stack_a, argv);
+	while (argv[++i])
+	{
+		strs = ft_split(argv[i], ' ');
+		stack_init(&stack_a, strs);
+	}
 	check_moves(&stack_a, &stack_b);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
-	if (argc == 2)
-		free_argv(argv);
+	free_argv(strs);
 	return (0);
 }
